@@ -10,7 +10,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule
+    MDBBootstrapModule.forRoot()
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
