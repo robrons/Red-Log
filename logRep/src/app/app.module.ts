@@ -6,10 +6,12 @@ import 'hammerjs';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { MyColptableComponent } from './my-colptable/my-colptable.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyColptableComponent
   ],
   imports: [
     BrowserModule,
