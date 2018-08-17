@@ -1,0 +1,9 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.mat-button {
+    font-size: 20px;
+}
