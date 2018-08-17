@@ -1,0 +1,8 @@
+.example-header-image {
+    background-image: url('../../assets/redlogo.gif');
+    background-size: cover; 
+
+  }
+  .mat-card-title {
+      font-size: xx-large;
+  }

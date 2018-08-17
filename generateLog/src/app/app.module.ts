@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {MatExpansionModule, MatToolbarModule, MatButtonModule} from '@angular/material';
+import {MatExpansionModule, MatToolbarModule, MatButtonModule, MatCardModule, MatListModule, MatTreeModule} from '@angular/material';
 import { UpperviewComponent } from './upperview/upperview.component';
 
 @NgModule({
@@ -23,7 +23,10 @@ import { UpperviewComponent } from './upperview/upperview.component';
     BrowserAnimationsModule,
     MatExpansionModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatListModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
