@@ -6,3 +6,12 @@
   .mat-card-title {
       font-size: xx-large;
   }
+
+  .flex-container {
+      display: flex;
+  }
+
+  .pie {
+    height: 100px;
+    width: 400px
+  }
