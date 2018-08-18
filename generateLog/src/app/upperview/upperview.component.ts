@@ -12,22 +12,17 @@ export class UpperviewComponent implements OnInit {
 
   constructor() { }
   ngOnInit() {
-    this.chart = new Chart('canvas', {
-      type: 'line',
+    this.chart = new Chart('myChart', {
+      type: 'doughnut',
       data: {
-        labels: 'Assertions',
-        datasets: [
-          { 
-            data: 12,
-            borderColor: "#3cba9f",
-            fill: false
-          },
-          { 
-            data: 32,
-            borderColor: "#ffcc00",
-            fill: false
-          },
-        ]
+        datasets: [{
+            data: [10, 30]
+        }],
+        labels: [
+          'Red',
+          'Yellow',
+          'Blue'
+      ]
       },
       options: {
         legend: {
@@ -35,10 +30,10 @@ export class UpperviewComponent implements OnInit {
         },
         scales: {
           xAxes: [{
-            display: true
+            display: false
           }],
           yAxes: [{
-            display: true
+            display: false
           }],
         }
       }
