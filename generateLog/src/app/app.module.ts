@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatExpansionModule, MatToolbarModule, MatButtonModule, MatCardModule,
-   MatGridListModule, MatListModule, MatTreeModule, MatTableModule, MatPaginatorModule, MatSortModule} from '@angular/material';
+   MatGridListModule, MatListModule, MatTreeModule, MatTableModule,
+   MatPaginatorModule, MatSortModule, MatTabsModule} from '@angular/material';
 import { UpperviewComponent } from './upperview/upperview.component';
 import { AssertResultComponent } from './assert-result/assert-result.component';
 
@@ -33,7 +34,8 @@ import { AssertResultComponent } from './assert-result/assert-result.component';
     MatGridListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
