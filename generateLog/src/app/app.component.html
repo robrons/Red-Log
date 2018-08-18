@@ -1,6 +1,12 @@
 <mat-toolbar color="primary">
     <span>Redfish™ Conformance Checker Result</span>
-    <button mat-button>About</button>
 </mat-toolbar>
-<app-upperview></app-upperview>
-<app-colaptable></app-colaptable>
+<mat-tab-group mat-stretch-tabs>
+    <mat-tab label="Chose File"></mat-tab>
+    <mat-tab label="Results">
+        <app-upperview></app-upperview>
+        <app-colaptable></app-colaptable>
+    </mat-tab>
+    <mat-tab label="About">
+    </mat-tab>
+</mat-tab-group>
