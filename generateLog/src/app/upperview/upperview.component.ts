@@ -16,13 +16,14 @@ export class UpperviewComponent implements OnInit {
       type: 'doughnut',
       data: {
         datasets: [{
-          data: [10, 20],
-          backgroundColor: ["#3cba9f", "#c45850"]
+          data: [55, 25, 20],
+          backgroundColor: ["#3cba9f", "#ffcc66", "#c45850"]
         }],
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
           'Pass',
-          'Fail',
+          'Warn',
+          'Fail'
         ]
       },
       options: {
