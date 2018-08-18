@@ -9,14 +9,16 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatExpansionModule, MatToolbarModule, MatButtonModule, MatCardModule,
-   MatGridListModule, MatListModule, MatTreeModule} from '@angular/material';
+   MatGridListModule, MatListModule, MatTreeModule, MatTableModule, MatPaginatorModule, MatSortModule} from '@angular/material';
 import { UpperviewComponent } from './upperview/upperview.component';
+import { AssertResultComponent } from './assert-result/assert-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColaptableComponent,
-    UpperviewComponent
+    UpperviewComponent,
+    AssertResultComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,10 @@ import { UpperviewComponent } from './upperview/upperview.component';
     MatCardModule,
     MatListModule,
     MatTreeModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

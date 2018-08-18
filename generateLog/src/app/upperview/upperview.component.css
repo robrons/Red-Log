@@ -9,9 +9,11 @@
 
   .flex-container {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
   }
 
-  .pie {
-    height: 100px;
-    width: 400px
-  }
+ .chartjs-render-monitor {
+     height: 339;
+ }

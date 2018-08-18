@@ -24,7 +24,13 @@ export class UpperviewComponent implements OnInit {
           'Pass',
           'Fail',
         ]
-      }
+      },
+      options: {
+        title: {
+            display: true,
+            text: 'Assertions Result'
+        }
+    }
     });
   }
 
