@@ -12,30 +12,18 @@ export class UpperviewComponent implements OnInit {
 
   constructor() { }
   ngOnInit() {
-    this.chart = new Chart('myChart', {
+    this.chart = new Chart('asserPie', {
       type: 'doughnut',
       data: {
         datasets: [{
-            data: [10, 30]
+          data: [10, 20],
+          backgroundColor: ["#3cba9f", "#c45850"]
         }],
+        // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
-          'Red',
-          'Yellow',
-          'Blue'
-      ]
-      },
-      options: {
-        legend: {
-          display: false
-        },
-        scales: {
-          xAxes: [{
-            display: false
-          }],
-          yAxes: [{
-            display: false
-          }],
-        }
+          'Pass',
+          'Fail',
+        ]
       }
     });
   }
