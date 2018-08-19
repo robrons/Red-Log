@@ -13,7 +13,7 @@ export class AssertResultComponent implements OnInit {
   dataSource: AssertResultDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'name', 'comm', 'stat'];
 
   ngOnInit() {
     this.dataSource = new AssertResultDataSource(this.paginator, this.sort);

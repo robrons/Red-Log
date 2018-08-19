@@ -10,7 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatExpansionModule, MatToolbarModule, MatButtonModule, MatCardModule,
    MatGridListModule, MatListModule, MatTreeModule, MatTableModule,
-   MatPaginatorModule, MatSortModule, MatTabsModule} from '@angular/material';
+   MatPaginatorModule, MatSortModule, MatTabsModule, MatCheckboxModule} from '@angular/material';
 import { UpperviewComponent } from './upperview/upperview.component';
 import { AssertResultComponent } from './assert-result/assert-result.component';
 
@@ -35,7 +35,8 @@ import { AssertResultComponent } from './assert-result/assert-result.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTabsModule
+    MatTabsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

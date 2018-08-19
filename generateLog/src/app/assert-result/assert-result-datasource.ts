@@ -7,11 +7,13 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface AssertResultItem {
   name: string;
   id: number;
+  comm: string;
+  stat: string;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: AssertResultItem[] = [
-  {id: 1, name: 'Hydrogen'},
+  {id: 1, name: 'Hydrogen', comm: 'POP gjhg gfshgfjhsdgfjgsfskhgfjghfssdhjgfjsgf jdsfuyfdsjfgjshfgjsdhgfsjdfgjsdhgfjsdfhgjhg  kjhkghgfjhggjhgjhgr r fs fsdf fsgsgsd', stat: 'PASS'},
   {id: 2, name: 'Helium'},
   {id: 3, name: 'Lithium'},
   {id: 4, name: 'Beryllium'},

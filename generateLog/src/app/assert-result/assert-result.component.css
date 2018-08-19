@@ -1,0 +1,4 @@
+.my-mat-cell,
+.my-mat-header-cell {
+  flex: 0 0 30%;
+}
