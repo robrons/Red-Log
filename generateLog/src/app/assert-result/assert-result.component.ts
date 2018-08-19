@@ -18,4 +18,11 @@ export class AssertResultComponent implements OnInit {
   ngOnInit() {
     this.dataSource = new AssertResultDataSource(this.paginator, this.sort);
   }
+
+   /**
+   * Apply filtering.
+   */
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }
