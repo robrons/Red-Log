@@ -13,6 +13,7 @@ import {MatExpansionModule, MatToolbarModule, MatButtonModule, MatCardModule,
    MatPaginatorModule, MatSortModule, MatTabsModule, MatCheckboxModule, MatFormFieldModule} from '@angular/material';
 import { UpperviewComponent } from './upperview/upperview.component';
 import { AssertTableComponent } from './assert-table/assert-table.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AssertTableComponent } from './assert-table/assert-table.component';
     MatTabsModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

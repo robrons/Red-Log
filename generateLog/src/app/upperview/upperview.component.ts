@@ -8,31 +8,19 @@ import { Chart } from 'chart.js';
 })
 export class UpperviewComponent implements OnInit {
 
-  chart = []; // This will hold our chart info
+  public doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  public doughnutChartData: number[] = [350, 450, 100];
+  public doughnutChartType: string = 'doughnut';
+  // events
+  public chartClicked(e: any): void {
+    console.log(e);
+  }
+
+  public chartHovered(e: any): void {
+    console.log(e);
+  }
 
   constructor() { }
   ngOnInit() {
-    this.chart = new Chart('asserPie', {
-      type: 'doughnut',
-      data: {
-        datasets: [{
-          data: [55, 25, 20],
-          backgroundColor: ["#3cba9f", "#ffcc66", "#c45850"]
-        }],
-        // These labels appear in the legend and in the tooltips when hovering different arcs
-        labels: [
-          'Pass',
-          'Warn',
-          'Fail'
-        ]
-      },
-      options: {
-        title: {
-            display: true,
-            text: 'Assertions Result'
-        }
-    }
-    });
   }
-
 }
