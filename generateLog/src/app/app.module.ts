@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ColaptableComponent } from './colaptable/colaptable.component';
 
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule, ReactiveFormsModule} from '@angular/forms'; // <-- NgModel lives here
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatExpansionModule, MatToolbarModule, MatButtonModule, MatCardModule,
    MatGridListModule, MatListModule, MatTreeModule, MatTableModule, MatInputModule,
-   MatPaginatorModule, MatSortModule, MatTabsModule, MatCheckboxModule, MatFormFieldModule} from '@angular/material';
+   MatPaginatorModule, MatSelectModule, MatSortModule, MatTabsModule, MatCheckboxModule, MatFormFieldModule} from '@angular/material';
 import { UpperviewComponent } from './upperview/upperview.component';
 import { AssertTableComponent } from './assert-table/assert-table.component';
 import { ChartsModule } from 'ng2-charts';
@@ -40,7 +40,9 @@ import { ChartsModule } from 'ng2-charts';
     MatCheckboxModule,
     MatFormFieldModule,
     MatInputModule,
-    ChartsModule
+    ChartsModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,15 @@
 <mat-toolbar color="primary">
     <span>Redfish™ Conformance Checker Result</span>
 </mat-toolbar>
-<mat-tab-group>
-    <mat-tab label="Chose File">
-        <app-upperview></app-upperview>
-        <app-colaptable></app-colaptable>
-    </mat-tab>
-    <mat-tab label="Result">
-    </mat-tab>
-    <mat-tab label="About">
-    </mat-tab>
-<mat-tab-group>
+<mat-card>
+<mat-form-field>
+<mat-select placeholder="Chose File" [formControl]="animalControl" required>
+    <mat-option>--</mat-option>
+    <mat-option *ngFor="let animal of animals" [value]="animal">
+        {{animal.name}}
+    </mat-option>
+</mat-select>
+</mat-form-field>
+</mat-card>
+<app-upperview></app-upperview>
+<app-colaptable></app-colaptable>
