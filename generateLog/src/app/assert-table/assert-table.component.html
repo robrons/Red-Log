@@ -13,8 +13,14 @@
     <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
       <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
         <div class="example-element-diagram">
-          <div class="example-element-position"> {{element.Description}} </div>
-          <div class="example-element-symbol"> {{element.Comment}} </div>
+          <div>
+            <div class="mat-title">Description: </div>
+            <div class="mat-subheading-1">{{element.Description}}</div>
+          </div>
+          <div>
+            <div class="mat-title">Comment: </div>
+            <div class="mat-subheading-1">{{element.Comment}}</div>
+          </div>
         </div>
       </div>
     </td>
@@ -27,4 +33,6 @@
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 </table>
 
-<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">
+
+</mat-paginator>
