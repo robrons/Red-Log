@@ -34,89 +34,78 @@ export class AssertTableComponent implements OnInit {
 
 export interface PeriodicElement {
   Rule: string;
-  position: number;
   Status: number;
-  symbol: string;
-  description: string;
+  Comment: string;
+  Description: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    position: 1,
     Rule: 'Hydrogen',
     Status: 1.0079,
-    symbol: 'H',
-    description: `Hydrogen is a chemical element with symbol H and atomic number 1. With a standard
+    Comment: 'H',
+    Description: `Hydrogen is a chemical element with Comment H and atomic number 1. With a standard
         atomic Status of 1.008, hydrogen is the lightest element on the periodic table.`
   }, {
-    position: 2,
     Rule: 'Helium',
     Status: 4.0026,
-    symbol: 'He',
-    description: `Helium is a chemical element with symbol He and atomic number 2. It is a
+    Comment: 'He',
+    Description: `Helium is a chemical element with Comment He and atomic number 2. It is a
         colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first in the noble gas
         group in the periodic table. Its boiling point is the lowest among all the elements.`
   }, {
-    position: 3,
     Rule: 'Lithium',
     Status: 6.941,
-    symbol: 'Li',
-    description: `Lithium is a chemical element with symbol Li and atomic number 3. It is a soft,
+    Comment: 'Li',
+    Description: `Lithium is a chemical element with Comment Li and atomic number 3. It is a soft,
         silvery-white alkali metal. Under standard conditions, it is the lightest metal and the
         lightest solid element.`
   }, {
-    position: 4,
     Rule: 'Beryllium',
     Status: 9.0122,
-    symbol: 'Be',
-    description: `Beryllium is a chemical element with symbol Be and atomic number 4. It is a
+    Comment: 'Be',
+    Description: `Beryllium is a chemical element with Comment Be and atomic number 4. It is a
         relatively rare element in the universe, usually occurring as a product of the spallation of
         larger atomic nuclei that have collided with cosmic rays.`
   }, {
-    position: 5,
     Rule: 'Boron',
     Status: 10.811,
-    symbol: 'B',
-    description: `Boron is a chemical element with symbol B and atomic number 5. Produced entirely
+    Comment: 'B',
+    Description: `Boron is a chemical element with Comment B and atomic number 5. Produced entirely
         by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a
         low-abundance element in the Solar system and in the Earth's crust.`
   }, {
-    position: 6,
     Rule: 'Carbon',
     Status: 12.0107,
-    symbol: 'C',
-    description: `Carbon is a chemical element with symbol C and atomic number 6. It is nonmetallic
+    Comment: 'C',
+    Description: `Carbon is a chemical element with Comment C and atomic number 6. It is nonmetallic
         and tetravalent—making four electrons available to form covalent chemical bonds. It belongs
         to group 14 of the periodic table.`
   }, {
-    position: 7,
     Rule: 'Nitrogen',
     Status: 14.0067,
-    symbol: 'N',
-    description: `Nitrogen is a chemical element with symbol N and atomic number 7. It was first
+    Comment: 'N',
+    Description: `Nitrogen is a chemical element with Comment N and atomic number 7. It was first
         discovered and isolated by Scottish physician Daniel Rutherford in 1772.`
   }, {
-    position: 8,
     Rule: 'Oxygen',
     Status: 15.9994,
-    symbol: 'O',
-    description: `Oxygen is a chemical element with symbol O and atomic number 8. It is a member of
+    Comment: 'O',
+    Description: `Oxygen is a chemical element with Comment O and atomic number 8. It is a member of
          the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing
          agent that readily forms oxides with most elements as well as with other compounds.`
   }, {
-    position: 9,
     Rule: 'Fluorine',
     Status: 18.9984,
-    symbol: 'F',
-    description: `Fluorine is a chemical element with symbol F and atomic number 9. It is the
+    Comment: 'F',
+    Description: `Fluorine is a chemical element with Comment F and atomic number 9. It is the
         lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard
         conditions.`
   }, {
-    position: 10,
     Rule: 'Neon',
     Status: 20.1797,
-    symbol: 'Ne',
-    description: `Neon is a chemical element with symbol Ne and atomic number 10. It is a noble gas.
+    Comment: 'Ne',
+    Description: `Neon is a chemical element with Comment Ne and atomic number 10. It is a noble gas.
         Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about
         two-thirds the density of air.`
   },
