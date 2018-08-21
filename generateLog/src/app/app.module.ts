@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ColaptableComponent } from './colaptable/colaptable.component';
@@ -23,6 +24,7 @@ import { ChartsModule } from 'ng2-charts';
     AssertTableComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
