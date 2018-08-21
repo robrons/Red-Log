@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { RetrjsnService } from './retrjsn.service';
 
 
 export interface Animal {
@@ -12,7 +13,8 @@ export interface Animal {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   title = 'Conformance Results';
   animalControl = new FormControl('', [Validators.required]);
   animals: Animal[] = [
@@ -21,4 +23,13 @@ export class AppComponent {
     {name: 'Cow', sound: 'Moo!'},
     {name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!'},
   ];
+
+  constructor(
+    private retrjsnService : RetrjsnService;
+) { }
+
+  ngOnInit() {
+    this.retrjsnService.getJSON().subscribe(data => {
+      console.log(data);
+  });  }
 }
