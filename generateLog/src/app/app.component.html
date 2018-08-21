@@ -3,7 +3,7 @@
 </mat-toolbar>
 <mat-card>
 <mat-form-field>
-<mat-select placeholder="Chose File" [formControl]="animalControl" required>
+<mat-select  (selectionChange)="onSubmit(result)" placeholder="Chose File" [(ngModel)]="result" [formControl]="animalControl" required>
     <mat-option *ngFor="let result of conformaceResults" [value]="result">
         {{result}}
     </mat-option>
