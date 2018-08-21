@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { AssertResult } from './assert-table/assert-table.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransferService {
-  private data;
+
+  dataChange: BehaviorSubject<AssertResult[]> = new BehaviorSubject<AssertResult[]>([]);
+
   setData(data) {
-    this.data = data;
+    this.dataChange.next(data);
   }
 
-  getData() {
-    const temp = this.data;
-    this.clearData();
-    return temp;
+  get data(): AssertResult[] {
+    return this.dataChange.value;
   }
 
-  clearData() {
-    this.data = undefined;
+  constructor() {
   }
-
-  constructor() { }
 }

@@ -11,7 +11,7 @@ import { TransferService } from './transfer.service';
 
 export class AppComponent implements OnInit {
   conformaceResults: string[];
-  conformanceData: undefined;
+  conformanceData: any;
   title = 'Conformance Results';
   animalControl = new FormControl('', [Validators.required]);
   result: string;
@@ -32,7 +32,6 @@ export class AppComponent implements OnInit {
   onSubmit(data: string) {
     if (typeof this.conformanceData[data] !== 'undefined') {
     this.transferService.setData(this.conformanceData[data]);
-    console.log('Set Data');
     }
   }
 }
