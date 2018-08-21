@@ -9,7 +9,6 @@ export class RetrjsnService {
 
   constructor(private http: HttpClient) {
       this.getJSON().subscribe(data => {
-        console.log(data);
     });
    }
 
