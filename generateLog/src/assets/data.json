@@ -2,43 +2,43 @@
     "20180723-140716_rf-assertions-run": [
       {
         "Rule": "10284",
-        "Status": "Ferrari",
+        "Status": "PASS",
         "Comment": "primis in faucibus orci luctus et ultrices posuere cubilia curae duis",
         "Description": "vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non"
       },
       {
         "Rule": "0829",
-        "Status": "Pontiac",
+        "Status": "FAIL",
         "Comment": "semper sapien a libero nam dui proin leo odio porttitor id",
         "Description": "dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero"
       },
       {
         "Rule": "480",
-        "Status": "Mazda",
+        "Status": "WARN",
         "Comment": "libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas",
         "Description": "suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris"
       },
       {
         "Rule": "71182",
-        "Status": "Mazda",
+        "Status": "PASS",
         "Comment": "tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin",
         "Description": "duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in"
       },
       {
         "Rule": "11586",
-        "Status": "Mercedes-Benz",
+        "Status": "PASS",
         "Comment": "pede justo eu massa donec dapibus duis at velit eu est",
         "Description": "aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed"
       },
       {
         "Rule": "3741",
-        "Status": "Volkswagen",
+        "Status": "PASS",
         "Comment": "nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros",
         "Description": "mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante"
       },
       {
         "Rule": "2",
-        "Status": "BMW",
+        "Status": "FAIL",
         "Comment": "montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
         "Description": "mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat"
       }

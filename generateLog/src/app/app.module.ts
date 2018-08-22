@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { ColaptableComponent } from './colaptable/colaptable.component';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'; // <-- NgModel lives here
 
@@ -15,12 +14,12 @@ import {MatExpansionModule, MatToolbarModule, MatButtonModule, MatCardModule,
 import { UpperviewComponent } from './upperview/upperview.component';
 import { AssertTableComponent } from './assert-table/assert-table.component';
 import { ChartsModule } from 'ng2-charts';
-
+import { StoreModule } from '@ngrx/store';
+import { simpleReducer } from './simple.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColaptableComponent,
     UpperviewComponent,
     AssertTableComponent,
   ],
@@ -45,7 +44,8 @@ import { ChartsModule } from 'ng2-charts';
     MatInputModule,
     ChartsModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forRoot({post: simpleReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]

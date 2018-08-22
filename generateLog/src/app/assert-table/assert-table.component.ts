@@ -23,7 +23,6 @@ export class AssertTableComponent implements OnInit {
 
   dataSource = new UserDataSource(this.transferService);
   columnsToDisplay = ['Rule', 'Status'];
-
   ngOnInit() {
   }
 }
