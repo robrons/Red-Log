@@ -1,9 +1,10 @@
 import * as SimpleActions from './simple.actions';
 import { Simple } from './simple';
-
+import {DataSource} from '@angular/cdk/collections';
 export type Action = SimpleActions.All;
 
 const defauleState: Simple = {
+    tableData: undefined,
     chartData: [10, 23, 50],
     Summary: ['', '', '']
 }
@@ -22,6 +23,8 @@ export function simpleReducer(state: Simple = defauleState, action: Action) {
         case SimpleActions.UPDATE_SUMMARRY:
             return newState(state, { Summary: action.payload });
 
+        case SimpleActions.UPDATE_TABLE:
+            return newState(state, { tableData: action.payload });
         default:
             return state;
     }

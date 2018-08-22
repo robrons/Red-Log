@@ -19,7 +19,6 @@ interface AppState {
 export class UpperviewComponent implements OnInit {
 
   simple: Observable<Simple>;
-  dataSource = new StatDataSource(this.transferService);
   public doughnutChartLabels: string[] = ['Pass', 'Warn', 'Fail'];
   public doughnutChartType: string = 'doughnut';
 
@@ -46,14 +45,4 @@ export class UpperviewComponent implements OnInit {
    }
   ngOnInit() {
   }
-}
-
-export class StatDataSource extends DataSource<number> {
-  constructor(private transferService: TransferService) {
-    super();
-  }
-  connect(): Observable<number[]> {
-    return this.transferService.statChange;
-  }
-  disconnect() { }
 }

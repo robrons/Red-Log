@@ -4,6 +4,14 @@ import {MatSort, MatTableDataSource, MatPaginator} from '@angular/material';
 import {DataSource} from '@angular/cdk/collections';
 import { TransferService } from '../transfer.service';
 import { Observable, of } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { Simple } from '../simple';
+
+interface AppState {
+  simple: Simple;
+}
+
+
 @Component({
   selector: 'app-assert-table',
   templateUrl: './assert-table.component.html',
@@ -17,13 +25,22 @@ import { Observable, of } from 'rxjs';
   ],
 })
 export class AssertTableComponent implements OnInit {
-  constructor(
-    private transferService: TransferService
-  ) { }
+  simple: Observable<Simple>;
 
-  dataSource = new UserDataSource(this.transferService);
+  constructor(
+    private transferService: TransferService,
+    private store: Store<AppState>
+  ) {
+    this.simple = this.store.select('post');
+   }
+
+   dataSource = this.store.select(state => state.simple.tableData).;
+
+   @ViewChild(MatSort) sort: MatSort;
+
   columnsToDisplay = ['Rule', 'Status'];
   ngOnInit() {
+    this.dataSource.sort = this.store.select(state => state.simple.tableData.sort);
   }
 }
 
