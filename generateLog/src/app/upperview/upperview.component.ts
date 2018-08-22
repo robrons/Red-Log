@@ -20,8 +20,15 @@ export class UpperviewComponent implements OnInit {
 
   simple: Observable<Simple>;
   dataSource = new StatDataSource(this.transferService);
-  public doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  public doughnutChartLabels: string[] = ['Pass', 'Warn', 'Fail'];
   public doughnutChartType: string = 'doughnut';
+
+  public doughnutChartColors: Array<any> = [
+    {
+      backgroundColor: ['#71c989', '#f5b04d', '#f66364'],
+    }
+  ];
+
   // events
   public chartClicked(e: any): void {
     console.log(e);
