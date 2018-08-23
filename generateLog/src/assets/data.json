@@ -31,17 +31,11 @@
         "Description": "aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed"
       },
       {
-        "Rule": "3741",
-        "Status": "PASS",
-        "Comment": "nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros",
-        "Description": "mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante"
-      },
-      {
-        "Rule": "2",
-        "Status": "FAIL",
-        "Comment": "montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
-        "Description": "mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat"
-      }
+        "Rule": "10.9.1.1",
+        "Status": "TTU Server",
+        "Comment": "0:07:13",
+        "Description": ""
+      } 
     ],
     "20180723-140714_rf-assertions-run": [
       {

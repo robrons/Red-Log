@@ -5,11 +5,11 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-content class="flex-container">
-    <mat-list role="list">
-      <mat-list-item role="listitem"><h2 class="mat-h2">System: 10.9.1.1</h2></mat-list-item>
-      <mat-list-item role="listitem"><h2 class="mat-h2">Description: TTU Server</h2></mat-list-item>
+    <mat-list *ngIf="simple | async as s" role="list">
+      <mat-list-item role="listitem"><h2 class="mat-h2">System: {{s.Summary.Rule}} </h2></mat-list-item>
+      <mat-list-item role="listitem"><h2 class="mat-h2">Description: {{s.Summary.Status}}</h2></mat-list-item>
       <mat-list-item role="listitem"><h2 class="mat-h2">Tool Version: 1.1.4</h2></mat-list-item>
-      <mat-list-item role="listitem"><h2 class="mat-h2">Run time: 0:07:13</h2></mat-list-item>
+      <mat-list-item role="listitem"><h2 class="mat-h2">Run time: {{s.Summary.Comment}}</h2></mat-list-item>
     </mat-list>
     <div *ngIf="simple | async as s"><canvas  width="250" height="250" baseChart
       [data]="s.chartData"

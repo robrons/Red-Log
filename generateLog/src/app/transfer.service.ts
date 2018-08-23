@@ -21,13 +21,16 @@ export class TransferService {
   }
 
   dataChange: BehaviorSubject<AssertResult[]> = new BehaviorSubject<AssertResult[]>([]);
+  summaryData: any;
 
   setData(data) {
-    this.dataChange.next(data);
+    this.summaryData = data[data.length - 1];
+    this.dataChange.next(data.slice(0, data.length - 2));
     this.changeTable(new MatTableDataSource(data));
     const stat: number[] = [data.filter(value => value.Status === 'PASS').length,
     data.filter(value => value.Status === 'WARN').length, data.filter(value => value.Status === 'FAIL').length];
     this.changeStat(stat);
+    this.changeSumm(this.summaryData);
   }
 
   get data(): AssertResult[] {
@@ -42,4 +45,7 @@ export class TransferService {
     this.store.dispatch(new SimpleActions.UpdateTable(tableData));
   }
 
+  changeSumm(summaryData: string[]) {
+    this.store.dispatch(new SimpleActions.UpdateSummary(summaryData));
+  }
 }
