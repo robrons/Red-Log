@@ -7,6 +7,8 @@ import { BehaviorSubject, Observable, of as observableOf, merge } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Simple } from '../simple';
 import { map } from 'rxjs/operators';
+import {FormControl} from '@angular/forms';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 interface AppState {
   simple: Simple;
@@ -26,6 +28,8 @@ interface AppState {
   ],
 })
 export class AssertTableComponent implements OnInit {
+  myControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;

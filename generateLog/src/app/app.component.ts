@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit(data: string) {
+    console.log(data);
     if (typeof this.conformanceData[data] !== 'undefined') {
     this.transferService.setData(this.conformanceData[data]);
     }
