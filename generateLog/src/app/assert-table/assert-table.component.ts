@@ -46,12 +46,20 @@ export class AssertTableComponent implements OnInit {
 
   ngOnInit() {
     this.transferService.dataChange.subscribe(result => {
-    this.dataSource = new UserDataSource(this.transferService, this.paginator, this.sort);
+      this.dataSource = new UserDataSource(this.transferService, this.paginator, this.sort);
     });
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
 
 export class UserDataSource extends DataSource<AssertResult> {
+
+  _filterChange = new BehaviorSubject('');
+  get filter(): string { return this._filterChange.value; }
+  set filter(filter: string) { this._filterChange.next(filter); }
 
   data: Observable<AssertResult[]> = this.transferService.dataChange;
 
@@ -70,13 +78,18 @@ export class UserDataSource extends DataSource<AssertResult> {
     const dataMutations = [
       observableOf(this.rdata),
       this.paginator.page,
-      this.sort.sortChange
+      this.sort.sortChange,
+      this._filterChange
     ];
 
-   this.paginator.length = this.rdata.length;
+    this.paginator.length = this.rdata.length;
 
     return merge(...dataMutations).pipe(map(() => {
-      return this.getPagedData(this.getSortedData([...this.rdata]));
+      return this.getPagedData(this.getSortedData([...this.rdata])).filter((item: AssertResult) => {
+        const searchStr = (item.Status + item.Rule).toLowerCase();
+        return searchStr.indexOf
+          (this.filter.toLowerCase()) !== -1;
+      });
     }));
   }
 
