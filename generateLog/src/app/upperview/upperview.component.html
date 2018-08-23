@@ -1,15 +1,15 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      Summary
+      <div class="mat-display-3">Summary</div>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content class="flex-container">
     <mat-list *ngIf="simple | async as s" role="list">
-      <mat-list-item role="listitem"><h2 class="mat-h2">System: {{s.Summary.Rule}} </h2></mat-list-item>
-      <mat-list-item role="listitem"><h2 class="mat-h2">Description: {{s.Summary.Status}}</h2></mat-list-item>
-      <mat-list-item role="listitem"><h2 class="mat-h2">Tool Version: 1.1.4</h2></mat-list-item>
-      <mat-list-item role="listitem"><h2 class="mat-h2">Run time: {{s.Summary.Comment}}</h2></mat-list-item>
+      <mat-list-item role="listitem"><h2 class="mat-h2" style="color:#708090;">System: {{s.Summary.Rule}} </h2></mat-list-item>
+      <mat-list-item role="listitem"><h2 class="mat-h2" style="color:#708090;">Description: {{s.Summary.Status}}</h2></mat-list-item>
+      <mat-list-item role="listitem"><h2 class="mat-h2" style="color:#708090;">Tool Version: 1.1.4</h2></mat-list-item>
+      <mat-list-item role="listitem"><h2 class="mat-h2" style="color:#708090;">Run time: {{s.Summary.Comment}}</h2></mat-list-item>
     </mat-list>
     <div *ngIf="simple | async as s"><canvas  width="250" height="250" baseChart
       [data]="s.chartData"
