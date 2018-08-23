@@ -1,41 +1,349 @@
   {
     "20180723-140716_rf-assertions-run": [
       {
-        "Rule": "10284",
-        "Status": "PASS",
-        "Comment": "primis in faucibus orci luctus et ultrices posuere cubilia curae duis",
-        "Description": "vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non"
+        "Rule": "0.0.0"
       },
       {
-        "Rule": "0829",
-        "Status": "FAIL",
-        "Comment": "semper sapien a libero nam dui proin leo odio porttitor id",
-        "Description": "dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero"
+        "Rule": "6.1.0"
       },
       {
-        "Rule": "480",
-        "Status": "WARN",
-        "Comment": "libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas",
-        "Description": "suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris"
+        "Description": "All the URI's that are not valid should return 404 which is method not found.",
+        "Rule": "6.1.0",
+        "Status": "PASS"
       },
       {
-        "Rule": "71182",
-        "Status": "PASS",
-        "Comment": "tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin",
-        "Description": "duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in"
+        "Rule": "6.1.1"
       },
       {
-        "Rule": "11586",
-        "Status": "PASS",
-        "Comment": "pede justo eu massa donec dapibus duis at velit eu est",
-        "Description": "aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed"
+        "Description": "A Redfish interface shall be exposed through a web service endpoint implemented using Hypertext Transfer Protocols, version 1.1 (RFCL616).",
+        "Rule": "6.1.1",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.2"
+      },
+      {
+        "Description": "Each unique instance of a resource shall be identified by a URI; thus a URI cannot reference multiple resources though it may reference a single collection resource.",
+        "Rule": "6.1.2",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.6"
+      },
+      {
+        "Description": "The unique identifier part of a URI shall be unique within the implementation.",
+        "Rule": "6.1.6",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.7"
+      },
+      {
+        "Description": "URIs, as described in RFCL986, may also contain a query (?query) and a frag (#frag) components.  Queries are addressed in the section Query Parameters.  Fragments (frag) shall be ignored by the server when used as the URI for submitting an operation.",
+        "Rule": "6.1.7",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.8.1"
+      },
+      {
+        "Comment": "Requesting POST on resource /redfish/v1/Sessions with request body {'UserName': 'root', 'Password': 'redfish'}",
+        "Rule": "6.1.8.1"
+      },
+      {
+        "Rule": "6.1.8.1.1"
+      },
+      {
+        "Description": "The service shall set the Location header to the URI of the newly created resource.   ",
+        "Rule": "6.1.8.1.1",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.8.1.2"
+      },
+      {
+        "Description": "It may include a response body containing the representation of the newly created resource",
+        "Rule": "6.1.8.1.2",
+        "Status": "PASS"
+      },
+      {
+        "Description": "\nPOST\nObject create, Object action, Eventing\nYes\n",
+        "Rule": "6.1.8.1",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.8.2"
+      },
+      {
+        "Description": "\nGET\nObject or Collection retrieval\nYes\n",
+        "Rule": "6.1.8.2",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.8.3"
+      },
+      {
+        "Comment": "~ note: PATCH could not be verified",
+        "Rule": "6.1.8.3"
+      },
+      {
+        "Description": "\nPATCH\nObject update\nYes\n",
+        "Rule": "6.1.8.3",
+        "Status": "WARN"
+      },
+      {
+        "Rule": "6.1.8.4"
+      },
+      {
+        "Comment": "Requesting POST on resource /redfish/v1/Sessions with request body {'UserName': 'root', 'Password': '********'}",
+        "Rule": "6.1.8.4"
+      },
+      {
+        "Comment": "DEBUG response headers: Location: /redfish/v1/Sessions/2; X-Auth-Token: 5990f439abe01dd37f69e1d629366234",
+        "Rule": "6.1.8.4"
+      },
+      {
+        "Description": "\nDELETE\nObject delete\nYes\n",
+        "Rule": "6.1.8.4",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.9"
+      },
+      {
+        "Description": "<PUT and HEAD may be also be supported> - Other HTTP methods are not allowed and shall receive a 405 response.",
+        "Rule": "6.1.9",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.11"
+      },
+      {
+        "Description": "All resources shall be made available using the JSON media type\n  \"application/json\".",
+        "Rule": "6.1.11",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.12"
+      },
+      {
+        "Description": "Redfish services shall make every resource available in a representation based on JSON, as specified in RFC4627. Receivers shall not reject a message because it is encoded in JSON, and shall offer at least one response representation based on JSON.",
+        "Rule": "6.1.12",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.13"
+      },
+      {
+        "Comment": "~ GET:/redfish/v1/UpdateService/FirmwareInventory/Previous-25227-3.15.15.15 failed : HTTP status 200:OK, Expected statuses: [406]",
+        "Rule": "6.1.13"
+      },
+      {
+        "Comment": "200:OK is also an acceptable status",
+        "Rule": "6.1.13"
+      },
+      {
+        "Description": "Clients may request compression by specifying an Accept-Encoding header in the request.\n Responses to GET requests shall only be compressed if requested by the client.\n\n Services should support gzip compression when requested by the client.",
+        "Rule": "6.1.13",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.1.14"
+      },
+      {
+        "Description": "Implementations should support returning ETag headers for each response that represents a single resource.  Implementations shall support returning ETag headers for certain requests and responses as listed in the Security section.",
+        "Rule": "6.1.14",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.2.3"
+      },
+      {
+        "Description": "A GET on the resource \"/redfish\" shall return the following body:\njson { \"v1\": \"/redfish/v1/\" } ",
+        "Rule": "6.2.3",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.3.1"
+      },
+      {
+        "Comment": "~ GET /redfish : HTTP status 200:OK",
+        "Rule": "6.3.1"
+      },
+      {
+        "Comment": "~ GET /redfish/v1/ : HTTP status 200:OK",
+        "Rule": "6.3.1"
+      },
+      {
+        "Comment": "~ GET /redfish/v1/odata : HTTP status 200:OK",
+        "Rule": "6.3.1"
+      },
+      {
+        "Comment": "~ GET /redfish/v1/$metadata : HTTP status 200:OK",
+        "Rule": "6.3.1"
+      },
+      {
+        "Description": "Redfish is a hypermedia API with a small set of defined URIs.  All other resources are accessible via opaque URIs referenced from the root service.  The following Redfish-defined URIs shall be supported by a Redfish service:\n\n/redfish The URI that is used to return the version \n/redfish/v1/ The URI for the Redfish Service Root \n/redfish/v1/odata The URI for the Redfish OData Service Document \n/redfish/v1/$metadata The URI for the Redfish Metadata Document ",
+        "Rule": "6.3.1",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.3.2"
+      },
+      {
+        "Description": "In addition, the following URI without a trailing slash shall be either Redirected to the Associated Redfish-defined URI shown in the table below or else shall be treated by the service as the equivalent URI to the associated Redfish-defined URI:\n\n/redfish/v1     /redfish/v1/ ",
+        "Rule": "6.3.2",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.3.3"
+      },
+      {
+        "Description": "All relative URIs used by the service shall start with a double forward slash (\"//\") and include the authority (e.g. //mgmt.vendor.com/redfish/v1/Systems) or a single forward slash (\"/\") and include the absolute-path (e.g. /redfish/v1/Systems).",
+        "Rule": "6.3.3",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.1"
+      },
+      {
+        "Description": "Redfish services shall understand and be able to process the headers in the following table as defined by the HTTP 1.1 specification if the value in the Required column is set to \"Yes\".",
+        "Rule": "6.4.1",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.2.1"
+      },
+      {
+        "Comment": "~ GET /redfish/v1/$metadata with Accept type 'application/xml'",
+        "Rule": "6.4.2.1"
+      },
+      {
+        "Description": "\nAccept\nYes\nRFC 2616, Section 14.1\nIndicates to the server what media type(s) this client is prepared to accept. application/json shall be supported for requesting resources and application/xml shall be supported for requesting metadata.\n",
+        "Rule": "6.4.2.1",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.2.2"
+      },
+      {
+        "Comment": "Requesting POST on resource /redfish/v1/Sessions with request body {'UserName': 'root', 'Password': 'redfish'} and wihtout content type in request headers",
+        "Rule": "6.4.2.2"
+      },
+      {
+        "Comment": "1st POST returned status 415",
+        "Rule": "6.4.2.2"
+      },
+      {
+        "Comment": "Requesting POST (/redfish/v1/Sessions) WITH the required header Content-Type : application/json; charset=utf-8 and request body {'UserName': 'root', 'Password': 'redfish'}",
+        "Rule": "6.4.2.2"
+      },
+      {
+        "Comment": "2nd POST returned status 201",
+        "Rule": "6.4.2.2"
+      },
+      {
+        "Description": "\nContent-Type\nConditional\nRFC 2616, Section 14.17\nDescribes the type of representation used in the message body.  charset=utf-8 shall be supported for requests that have a body.  Shall be required if there is a request body.\n",
+        "Rule": "6.4.2.2",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.2.3"
+      },
+      {
+        "Comment": "~ GET: /redfish/v1/UpdateService/FirmwareInventory/Previous-25227-3.15.15.15 HTTP status 200:OK with request header: OData-Version and incorrect value: 3.0 passed, which is an unexpected behavior",
+        "Rule": "6.4.2.3"
+      },
+      {
+        "Description": "\nOData-Version\nYes\n4.0\nServices shall reject requests which specify an unsupported OData version.\n",
+        "Rule": "6.4.2.3",
+        "Status": "FAIL"
+      },
+      {
+        "Rule": "6.4.2.4"
+      },
+      {
+        "Description": "\nAuthorization\nconditional\n4.0\nRequired for [Basic Authorization\n",
+        "Rule": "6.4.2.4",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.2.5"
+      },
+      {
+        "Description": "\nUser-Agent\nYes\nRFC 2616, Section 14.43\nRequired for tracing product tokens and their version.  Multiple product tokens may be listed.\n",
+        "Rule": "6.4.2.5",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.2.6"
+      },
+      {
+        "Description": "\nHost\nYes\nRFC 2616, Section 14.23\nRequired to allow support of multiple origin hosts at a single IP address.\n",
+        "Rule": "6.4.2.6",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.4"
+      },
+      {
+        "Comment": "~ GET:/redfish/v1/Managers/iDRAC.Embedded.1/VirtualMedia failed : HTTP status 403:Forbidden, Expected statuses: [200]",
+        "Rule": "6.4.4"
+      },
+      {
+        "Description": "The HTTP GET method shall be used to retrieve a resource without causing any side effects.",
+        "Rule": "6.4.4",
+        "Status": "FAIL"
+      },
+      {
+        "Rule": "6.4.5"
+      },
+      {
+        "Description": "The service shall ignore the content of the body on a GET.",
+        "Rule": "6.4.5",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.13"
+      },
+      {
+        "Description": "Implementation shall return the 501, Not Implemented, status code for any query parameters starting with \"$\" that are not supported, and should return an extended error indicating the requested query parameter(s) not supported for this resource.",
+        "Rule": "6.4.13",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.14"
+      },
+      {
+        "Description": "Implementations shall ignore unknown or unsupported query parameters that do not begin with \"$\".",
+        "Rule": "6.4.14",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.16"
+      },
+      {
+        "Description": "Retrieved collections shall always include the count property to specify the total number of members in the collection.",
+        "Rule": "6.4.16",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.18"
+      },
+      {
+        "Description": "The HEAD method differs from the GET method in that it MUST NOT return message body information.  However, all of the same meta information and status codes in the HTTP headers will be returned as though a GET method were processed, including authorization checks.",
+        "Rule": "6.4.18",
+        "Status": "PASS"
+      },
+      {
+        "Rule": "6.4.21"
       },
       {
         "Rule": "10.9.1.1",
         "Status": "TTU Server",
         "Comment": "0:07:13",
         "Description": ""
-      } 
+      }
     ],
     "20180723-140714_rf-assertions-run": [
       {
