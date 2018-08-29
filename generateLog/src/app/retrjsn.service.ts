@@ -13,6 +13,6 @@ export class RetrjsnService {
    }
 
    public getJSON(): Observable<any> {
-    return this.http.get('./assets/data.json');
+    return this.http.get('./assets/serveData.json');
   }
 }
