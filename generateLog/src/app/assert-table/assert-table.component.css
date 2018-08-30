@@ -46,4 +46,9 @@ table {
   .example-element-description-attribution {
     opacity: 0.5;
   }
+
+  table {
+      background-color: linen;
+  }
+ 
   

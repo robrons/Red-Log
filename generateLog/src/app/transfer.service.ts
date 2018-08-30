@@ -29,7 +29,7 @@ export class TransferService {
     this.summaryData = data['Summary'];
     const tableData = [];
     for (const rule of Object.keys(data)) {
-      if (rule !== 'Summary') {
+      if (rule !== 'Summary' && rule !== '0.0.0') {
       const value = data[rule];
       const map = {'Rule': rule, 'Comment': value.Comment, 'Status': value.Status, 'Description': value.Description};
       tableData.push(map);
