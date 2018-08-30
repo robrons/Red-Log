@@ -55,7 +55,9 @@ export class AssertTableComponent implements OnInit {
   }
 
   applyFilter(filterValue: string) {
+    this.transferService.dataChange.subscribe(result => {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  });
   }
 }
 
@@ -70,13 +72,14 @@ export class UserDataSource extends DataSource<AssertResult> {
   rdata: AssertResult[];
 
   constructor(private transferService: TransferService,
-    private paginator: MatPaginator, private sort: MatSort) {
+    public paginator: MatPaginator, private sort: MatSort) {
     super();
   }
   connect(): Observable<AssertResult[]> {
 
     this.data.subscribe(result => {
       this.rdata = result;
+      this.paginator.length = this.rdata.length;
     });
 
     const dataMutations = [
@@ -86,7 +89,6 @@ export class UserDataSource extends DataSource<AssertResult> {
       this._filterChange
     ];
 
-    this.paginator.length = this.rdata.length;
 
     return merge(...dataMutations).pipe(map(() => {
       return this.getPagedData(this.getSortedData([...this.rdata])).filter((item: AssertResult) => {
