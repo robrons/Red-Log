@@ -1,10 +1,24 @@
-.AboutCard {
-    width: 75%;
-    margin: 10px auto;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
 }
 
-img{
+.logo {
     object-fit: cover; /*this makes de image in src fit to the size of specified below*/
-    width: 50%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
-    height: 50%;
+    width: 30%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: auto;
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+
+  .mat-display-1 {
+      text-align: center;
+  }
+
+  .mat-h2 {
+      text-align: center;
+      padding-bottom: 10%;
   }
