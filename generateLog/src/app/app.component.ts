@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, NgForm } from '@angular/forms';
 import { RetrjsnService } from './retrjsn.service';
 import { TransferService } from './transfer.service';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-root',

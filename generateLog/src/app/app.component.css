@@ -12,3 +12,7 @@
 .mat-form-field {
     width: 25%;
 }
+
+.example-stretched-tabs {
+    max-width: 100%;
+  }

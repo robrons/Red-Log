@@ -1,7 +1,8 @@
 <mat-toolbar color="primary">
     <span>Redfish™ Conformance Checker Result</span>
-    <button mat-button>About</button>
 </mat-toolbar>
+<mat-tab-group   mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+<mat-tab label="Result">
 <mat-card>
 <mat-form-field>
 <mat-select  (selectionChange)="onSubmit(result)" placeholder="Chose File" [(ngModel)]="result" [formControl]="animalControl" required>
@@ -18,3 +19,7 @@
 </mat-card>
 </div>
 <ng-template #elseBlock><h1 class="mat-display-3" style="color:#a6a6a6; text-align: center; padding-top: 25%; ">Please chose a file to display the results.</h1></ng-template>
+</mat-tab>
+<mat-tab label="About">
+</mat-tab>
+</mat-tab-group>
