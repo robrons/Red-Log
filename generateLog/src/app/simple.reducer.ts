@@ -6,7 +6,7 @@ export type Action = SimpleActions.All;
 const defauleState: Simple = {
     tableData: undefined,
     chartData: [10, 23, 50],
-    Summary: ['', '', '']
+    Summary: {'DNS_Name': '', 'Description': '', 'Cached URIs': '', 'Run_Time': ''}
 }
 
 const newState = (state, newData) => {

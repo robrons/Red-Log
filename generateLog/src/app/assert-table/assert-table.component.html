@@ -17,7 +17,7 @@
             <div class="mat-title">Description: </div>
             <div class="mat-subheading-1">{{element.Description}}</div>
           </div>
-          <div>
+          <div  *ngIf="element.Comment !== undefined;">
             <div class="mat-title">Comment: </div>
             <div class="mat-subheading-1">{{element.Comment}}</div>
           </div>

@@ -30,6 +30,7 @@ table {
     font-weight: lighter;
     margin: 8px 0;
     height: auto;
+    width: 100%;
   }
   
   .example-element-symbol {

@@ -16,7 +16,7 @@ export class UpdateChart implements Action {
 export class UpdateSummary implements Action {
     readonly type = UPDATE_SUMMARRY;
 
-    constructor(public payload: string[]) {
+    constructor(public payload: any) {
     }
 }
 

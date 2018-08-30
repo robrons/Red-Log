@@ -3,5 +3,5 @@ import {MatSort, MatTableDataSource, MatPaginator} from '@angular/material';
 export interface Simple {
     chartData: number[];
     tableData: MatTableDataSource<any>;
-    Summary: string[];
+    Summary: any;
 }
