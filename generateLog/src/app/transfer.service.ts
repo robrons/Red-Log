@@ -24,11 +24,18 @@ export class TransferService {
   summaryData: any;
 
   setData(data) {
-    this.summaryData = data[data.length - 1];
-    this.dataChange.next(data.slice(0, data.length - 2));
-    this.changeTable(new MatTableDataSource(data));
-    const stat: number[] = [data.filter(value => value.Status === 'PASS').length,
-    data.filter(value => value.Status === 'WARN').length, data.filter(value => value.Status === 'FAIL').length];
+    this.summaryData = data['Summary'];
+    const tableData = [];
+    for (const rule of Object.keys(data)) {
+      if (rule !== 'Summary') {
+      const value = data[rule];
+      const map = {'Rule': rule, 'Comment': value.Comment, 'Status': value.Status, 'Description': value.Description};
+      tableData.push(map);
+      }
+    }
+    this.dataChange.next(tableData);
+    const stat: number[] = [tableData.filter(value => value.Status === 'PASS').length,
+    tableData.filter(value => value.Status === 'WARN').length, tableData.filter(value => value.Status === 'FAIL').length];
     this.changeStat(stat);
     this.changeSumm(this.summaryData);
   }
