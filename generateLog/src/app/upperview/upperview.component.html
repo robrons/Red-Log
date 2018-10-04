@@ -10,6 +10,7 @@
       <mat-list-item role="listitem"><h2 class="mat-h2" style="color:#708090;">Description: {{s.Summary.Description}}</h2></mat-list-item>
       <mat-list-item role="listitem"><h2 class="mat-h2" style="color:#708090;">Cached URIs: {{s.Summary.Cached_URIs}}</h2></mat-list-item>
       <mat-list-item role="listitem"><h2 class="mat-h2" style="color:#708090;">Run time: {{s.Summary.Run_Time}}</h2></mat-list-item>
+      <mat-list-item role="listitem"><h2 class="mat-h2" style="color:#708090;">Tool Version: {{s.Summary.Version}}</h2></mat-list-item>
     </mat-list>
     <div *ngIf="simple | async as s"><canvas  width="250" height="250" baseChart
       [data]="s.chartData"

@@ -42,6 +42,9 @@ export class TransferService {
     this.changeSumm(this.summaryData);
   }
 
+  setVersion(version) {
+    this.summaryData.Version = version['Version'];
+  }
   changeData(stat) {
     const data = this.allData;
     const tableData = [];

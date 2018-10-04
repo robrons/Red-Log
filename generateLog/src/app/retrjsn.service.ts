@@ -12,7 +12,11 @@ export class RetrjsnService {
     });
    }
 
-   public getJSON(): Observable<any> {
+  public getJSON(): Observable<any> {
     return this.http.get('../AssertionLogs.json');
+  }
+  
+  public getVersion(): Observable<any> {
+    return this.http.get('../Version.json');
   }
 }
